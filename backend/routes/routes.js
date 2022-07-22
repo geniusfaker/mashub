@@ -10,10 +10,10 @@ const upload = multer({
   storage: Storage,
 }).single("image");
 
-router.get("/", API.fetchAllPosts);
-router.post("/", upload, API.createPost);
-router.patch("/:id", upload, API.updatePost);
-router.delete("/:id", API.deletePost);
-router.get("/:id", API.fetchPostById);
+router.get("/", API.fetchAllAgents);
+router.post("/", upload, API.createAgent);
+router.patch("/:id", upload, API.updateAgent);
+router.delete("/:id", API.deleteAgent);
+router.get("/:id", API.fetchAgentById);
 
 module.exports = router;

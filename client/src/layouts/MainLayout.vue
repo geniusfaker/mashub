@@ -1,13 +1,12 @@
 <template>
   <q-layout view="lHr Lpr fFf">
-
     <q-header bordered class="bg-primary text-white" height-hint="98">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
           </q-avatar>
           Title
         </q-toolbar-title>
@@ -33,29 +32,28 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-
   </q-layout>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 export default {
-  setup () {
-    const leftDrawerOpen = ref(false)
-    const rightDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
+    const rightDrawerOpen = ref(false);
 
     return {
       leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
       },
 
       rightDrawerOpen,
-      toggleRightDrawer () {
-        rightDrawerOpen.value = !rightDrawerOpen.value
-      }
-    }
-  }
-}
+      toggleRightDrawer() {
+        rightDrawerOpen.value = !rightDrawerOpen.value;
+      },
+    };
+  },
+};
 </script>

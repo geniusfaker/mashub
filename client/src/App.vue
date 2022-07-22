@@ -1,17 +1,14 @@
 <template>
   <div class="app">
     <img src="./assets/logo.png" class="sd-logo" alt="ScaleDynamics" />
- <HelloBob />
-<MongoBob />
-</div>
+    <HelloBob />
+    <MongoBob />
+  </div>
 </template>
 
 <script setup>
-import HelloBob from './components/HelloBob.vue'
-import MongoBob from './components/MongoBob.vue'
-
-
-
+import HelloBob from './components/HelloBob.vue';
+import MongoBob from './components/MongoBob.vue';
 </script>
 
 <style>
@@ -43,13 +40,15 @@ span > a {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 </style>

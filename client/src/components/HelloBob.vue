@@ -4,7 +4,11 @@
     <h3 v-else>... Error when trying to get the welcome message</h3>
     <span>
       Learn about
-      <a href="https://docs.scaledynamics.com/docs/" target="_blank" rel="noreferrer">
+      <a
+        href="https://docs.scaledynamics.com/docs/"
+        target="_blank"
+        rel="noreferrer"
+      >
         ScaleDynamics Platform
       </a>
       and
@@ -15,8 +19,6 @@
 
 <script setup>
 // init ScaleDynamics Platform
-
-
 </script>
 
 <style scoped>

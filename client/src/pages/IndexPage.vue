@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center justify-evenly">
-<HelloBob />
-<MongoBob />
+    <HelloBob />
+    <MongoBob />
   </q-page>
 </template>
 

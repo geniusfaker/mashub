@@ -2,13 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const multer = require("multer");
+// const multer = require("multer");
 
 const app = express();
 
 const port = process.env.PORT || 5000;
 
-const upload = multer({ dest: "uploads" });
+// const upload = multer({ dest: "uploads" });
 
 //MIDDLEWARE
 
@@ -28,10 +28,10 @@ mongoose
   .catch((err) => console.log(err));
 
 // routes prefix
-app.use("/api/agents", require("./routes/routes"));
+app.use("/api", require("./routes/routes"));
 
 //   start server
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}/api/agents`)
 );

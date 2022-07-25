@@ -1,6 +1,5 @@
 const Extension = require("../models/extensions");
-const multer = require("multer");
-const fs = require("fs");
+// const multer = require("multer");
 // const multerStorage = multer.memoryStorage();
 
 // let Storage = multer.diskStorage({
@@ -13,7 +12,7 @@ const fs = require("fs");
 //   },
 // });
 
-module.exports = class AGENT_API {
+module.exports = class Extension_API {
   // fetch all Extensions
 
   static async fetchAllExtensions(req, res) {

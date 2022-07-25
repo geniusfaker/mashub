@@ -4,7 +4,6 @@
       clickable
       tag="a"
       v-for="item in store.menuItems"
-      target="_blank"
       :href="item.url"
       :key="item.title"
     >

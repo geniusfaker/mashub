@@ -13,7 +13,7 @@ const fs = require("fs");
 //   },
 // });
 
-module.exports = class AGENT_API {
+module.exports = class Framework_API {
   // fetch all Frameworks
 
   static async fetchAllFrameworks(req, res) {

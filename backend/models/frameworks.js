@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const agentSchema = mongoose.Schema({
+const frameworkSchema = mongoose.Schema({
   first_name: "string",
   last_name: "string",
   email: "string",

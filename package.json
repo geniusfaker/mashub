@@ -1,0 +1,37 @@
+{
+  "name": "mashub",
+  "version": "1.0.0",
+  "description": "a collection of smart agents",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "start:client": "cd frontend/ && npm start",
+    "start:server": "cd backend/ && quasar dev",
+    "postinstall:server": "cd backend/ && npm install",
+    "postinstall:client": "cd frontend/ && npm install",
+    "build:client": "cd frontend/ && quasar build",
+    "build:server": "cd backend/ && npm run build",
+    "build": "npm-run-all -p build:*",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geniusfaker/mashub.git"
+  },
+  "keywords": [
+    "Multi Agent Systems",
+    "Agent Oriented Programming",
+    "AOPS",
+    "Autonomous",
+    "Agent Oriented Software Engineering"
+  ],
+  "author": "geniusfaker <geniusfaker@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geniusfaker/mashub/issues"
+  },
+  "homepage": "https://github.com/geniusfaker/mashub#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

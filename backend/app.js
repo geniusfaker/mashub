@@ -34,5 +34,5 @@ app.use("", require("./routes/routes"));
 //   start server
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}/api/agents`)
+  console.log(`Example app listening at http://localhost:${port}/`)
 );

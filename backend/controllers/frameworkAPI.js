@@ -1,6 +1,5 @@
 const Framework = require("../models/frameworks");
-const multer = require("multer");
-const fs = require("fs");
+
 // const multerStorage = multer.memoryStorage();
 
 // let Storage = multer.diskStorage({

@@ -13,7 +13,7 @@ const fs = require("fs");
 //   },
 // });
 
-module.exports = class API {
+module.exports = class AGENT_API {
   // fetch all Agents
 
   static async fetchAllAgents(req, res) {

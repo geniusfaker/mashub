@@ -1,0 +1,1 @@
+"use strict";(globalThis["webpackChunkfrontend"]=globalThis["webpackChunkfrontend"]||[]).push([[489],{5489:(n,e,s)=>{s.r(e),s.d(e,{default:()=>h});const t={},a=t,h=a}}]);

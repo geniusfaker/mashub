@@ -12,7 +12,7 @@
     "start:server": "cd backend/ && npm start",
     "build": "rm -rf backend/public/* && npm run build:frontend && npm run build:copy",
     "build:frontend": "cd frontend && quasar build ",
-    "build:copy": " cp -r frontend/dist/*  ../backend/public)"
+    "build:copy": " cp -r frontend/dist/*  ../backend/public"
   },
   "repository": {
     "type": "git",

@@ -52,7 +52,7 @@ module.exports = class Framework_API {
   static async deleteFramework(req, res) {
     const id = req.params.id;
     try {
-      const result = await Framework.findByIdAndDelete(id);
+      const res = await Framework.findByIdAndDelete(id);
 
       res.status(200).json({ message: "framework delete success" });
     } catch (err) {

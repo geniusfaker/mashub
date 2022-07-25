@@ -51,7 +51,7 @@ module.exports = class Extension_API {
   static async deleteExtension(req, res) {
     const id = req.params.id;
     try {
-      const result = await Extension.findByIdAndDelete(id);
+      const res = await Extension.findByIdAndDelete(id);
 
       res.status(200).json({ message: "extension delete success" });
     } catch (err) {

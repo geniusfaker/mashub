@@ -23,12 +23,13 @@ mongoose
   .connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    dbName: "mashubDB",
   })
   .then(() => console.log("connected to mongodb"))
   .catch((err) => console.log(err));
 
 // routes prefix
-app.use("/api", require("./routes/routes"));
+app.use("", require("./routes/routes"));
 
 //   start server
 

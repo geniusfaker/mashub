@@ -1,6 +1,4 @@
 const Agent = require("../models/agents");
-const multer = require("multer");
-const fs = require("fs");
 // const multerStorage = multer.memoryStorage();
 
 // let Storage = multer.diskStorage({
@@ -52,7 +50,7 @@ module.exports = class AGENT_API {
   static async deleteAgent(req, res) {
     const id = req.params.id;
     try {
-      const result = await Agent.findByIdAndDelete(id);
+      const res = await Agent.findByIdAndDelete(id);
 
       res.status(200).json({ message: "agent delete success" });
     } catch (err) {

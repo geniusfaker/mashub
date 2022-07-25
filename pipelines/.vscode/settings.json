@@ -1,0 +1,21 @@
+{
+  "python.languageServer": "Pylance",
+  "python.linting.cwd": "${workspaceFolder}",
+  "python.autoComplete.extraPaths": [
+    "[\"./sources\" , \"${workspaceFolder}\"]",
+    "\"${cwd}\""
+  ],
+  "python.envFile": ".env",
+
+
+  "python.analysis.extraPaths": [
+    "[\"./sources\" , \"${workspaceFolder}\"]",
+    "\"/bin/python3\"",
+    "\"${cwd}\"",
+    "\".venv/lib/python3.8/site-packages\"",
+    "\".venv/lib64/python3.8/site-packages\"",
+    "\"/usr/bin/python3\""
+  ],
+
+  "python.pythonPath": ".venv/bin/python3"
+}

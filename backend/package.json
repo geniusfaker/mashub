@@ -1,11 +1,14 @@
 {
-  "name": "backend",
+  "name": "mashub-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "node express monogo backend with quasar frontend",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start:watch": "nodemon app.js",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,8 @@
     "mongoose": "^6.4.5"
   },
   "devDependencies": {
+    "@types/node": "^9.3.0",
+    "ts-node": "^4.1.0",
     "nodemon": "^2.0.19"
   }
 }

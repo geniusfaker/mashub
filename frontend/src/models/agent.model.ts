@@ -14,6 +14,7 @@ export interface Agent {
   key_phrase_4: 'string';
   key_phrase_5: 'string';
   public_url: 'string';
+  previous_version_availability: 'string';
   source_code_availability: 'string';
   version_history_availability: 'string';
   previous_version_urls: 'string';

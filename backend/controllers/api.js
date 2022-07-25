@@ -37,58 +37,38 @@ module.exports = class API {
   }
   // create agent
 
-  // static async createAgent(req, res) {
-  //   console.log(req.file);
-  //   const agent = await req.body;
-  //   let imageName = req.file.filename;
-  //   agent.image = imageName;
-  //   try {
-  //     await Agent.create(agent);
-  //     res.status(201).json({ message: "agent created successfully" });
-  //   } catch (err) {
-  //     res.status(400).json({ message: err.message });
-  //   }
-  // }
+  static async createAgent(req, res) {
+    console.log(req.file);
+    const agent = await req.body;
+    try {
+      await Agent.create(agent);
+      res.status(201).json({ message: "agent created successfully" });
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+  }
   // delete agent
 
-  // static async deleteAgent(req, res) {
-  //   const id = req.params.id;
-  //   try {
-  //     const result = await Agent.findByIdAndDelete(id);
-  //     if (result.image != "") {
-  //       try {
-  //         fs.unlinkSync("./uploads/" + result.image);
-  //       } catch (err) {
-  //         console.log(err);
-  //       }
-  //     }
-  //     res.status(200).json({ message: "agent delete success" });
-  //   } catch (err) {
-  //     res.status(404).json({ message: err.message });
-  //   }
-  // }
-  // // update agent
+  static async deleteAgent(req, res) {
+    const id = req.params.id;
+    try {
+      const result = await Agent.findByIdAndDelete(id);
 
-  // static async updateAgent(req, res) {
-  //   const id = req.params.id;
-  //   let new_image = "";
-  //   if (req.file) {
-  //     new_image = req.file.filename;
-  //     try {
-  //       fs.unlinkSync("./uploads/" + req.body.old_image);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   } else {
-  //     new_image = req.body.old_image;
-  //   }
-  //   const newPost = req.body;
-  //   newPost.image = new_image;
-  //   try {
-  //     await Agent.findByIdAndUpdate(id, newPost);
-  //     res.status(200).json({ message: "agent update success" });
-  //   } catch (err) {
-  //     res.status(404).json({ message: err.message });
-  //   }
-  // }
+      res.status(200).json({ message: "agent delete success" });
+    } catch (err) {
+      res.status(404).json({ message: err.message });
+    }
+  }
+  // update agent
+
+  static async updateAgent(req, res) {
+    const id = req.params.id;
+    const newPost = req.body;
+    try {
+      await Agent.findByIdAndUpdate(id, newPost);
+      res.status(200).json({ message: "agent update success" });
+    } catch (err) {
+      res.status(404).json({ message: err.message });
+    }
+  }
 };

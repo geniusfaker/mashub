@@ -10,7 +10,7 @@
     "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
     "start:frontend": "cd frontend/ && quasar dev",
     "start:server": "cd backend/ && npm start",
-    "build": "rm -rf backend/public/* && npm run build:frontend && npm run build:copy",
+    "build": "npm install && rm -rf backend/public/* && npm run build:frontend && npm run build:copy",
     "build:frontend": "cd frontend && quasar build ",
     "build:copy": " cp -r frontend/dist/*  backend/public"
   },

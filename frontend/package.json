@@ -9,7 +9,8 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "start":"quasar dev",
+    "start": "cd ../backend && nodemon app.js",
+    "heroku-postbuild": "yarn && yarn build",
     "serve:client": "quasar serve",
     "build:client": "quasar build"
   },

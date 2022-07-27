@@ -51,7 +51,7 @@ export const useMenuStore = defineStore({
   }),
   getters: {
     toggleLeftDrawer: (state) => {
-      return (state.leftDrawerOpen = !state.leftDrawerOpen);
+      state.leftDrawerOpen = !state.leftDrawerOpen;
     },
   },
   actions: {},

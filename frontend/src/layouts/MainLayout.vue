@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="menuStore.toggleLeftDrawer"
+          v-model="menuStore.leftDrawerOpen"
         />
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
@@ -21,11 +21,11 @@
       <q-list>
         <q-item-label header> Essential Links </q-item-label>
 
-        <EssentialLink
+        <!-- <MenuLink
           v-for="link in menuStore.MenuLinks"
           :key="link.title"
           v-bind="link"
-        />
+        /> -->
       </q-list>
     </q-drawer>
 
@@ -36,6 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import useMenuStore from 'stores/menuStore.ts';
+import { useMenuStore } from 'stores/menuStore';
 const menuStore = useMenuStore();
 </script>

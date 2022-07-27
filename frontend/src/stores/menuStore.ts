@@ -1,8 +1,27 @@
 import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
-export const useMenuStore = defineStore('menu', {
+interface MenuLink {
+  title: string;
+  caption?: string;
+  link?: string;
+  icon?: string;
+}
+withDefaults(defineProps<MenuLink>(), {
+  caption: '',
+  link: '#',
+  icon: '',
+});
+
+export type MenuLinkProps = {
+  MenuLinks: MenuLink[];
+};
+export const useMenuStore = defineStore({
+  id: 'menuStore',
+
   state: () => ({
-    menuItems: [
+    leftDrawerOpen: ref(false),
+    MenuLinks: [
       {
         title: 'Home',
         icon: 'home',
@@ -10,26 +29,30 @@ export const useMenuStore = defineStore('menu', {
       },
       {
         title: 'Multi Agent Systems',
-        icon: 'settings',
+        icon: 'code',
         url: '/#/agents',
       },
       {
         title: 'Frameworks',
-        icon: 'home',
+        icon: 'public',
         url: '/#/frameworks',
       },
       {
         title: 'Extensions',
-        icon: 'trash',
+        icon: 'rss_feed',
         url: '/#/extensions',
       },
       {
         title: 'About',
-        icon: 'home',
+        icon: 'info',
         url: '/#/about',
       },
     ],
   }),
-  getters: {},
+  getters: {
+    toggleLeftDrawer: (state) => {
+      return (state.leftDrawerOpen = !state.leftDrawerOpen);
+    },
+  },
   actions: {},
 });

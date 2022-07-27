@@ -1,34 +1,17 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
-      <q-icon :name="icon" />
+  <q-item clickable tag="a" target="_blank" :href="store.url">
+    <q-item-section v-if="store.icon" avatar>
+      <q-icon :name="store.icon" />
     </q-item-section>
 
     <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label>{{ store.title }}</q-item-label>
+      <q-item-label caption>{{ store.caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
 
 <script setup lang="ts">
-export interface EssentialLinkProps {
-  title: string;
-  caption?: string;
-  link?: string;
-  icon?: string;
-}
-withDefaults(defineProps<EssentialLinkProps>(), {
-  caption: '',
-  link: '#',
-  icon: '',
-});
+import useMenuStore from 'stores/menuStore.ts';
+const store = useMenuStore();
 </script>

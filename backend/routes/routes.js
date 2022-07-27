@@ -1,18 +1,13 @@
 const express = require("express");
-const app = express();
 const router = express.Router();
-// const multer = require("multer");
 
 //import api's
 const agentAPI = require("../controllers/agentAPI");
 const extensionAPI = require("../controllers/extensionAPI");
 const frameworkAPI = require("../controllers/frameworkAPI");
 
-// const Storage = API.Storage;
-
 //home
 //agents
-
 router.get("/agents/", agentAPI.fetchAllAgents);
 router.post("/agents/", agentAPI.createAgent);
 router.patch("/agents/:id", agentAPI.updateAgent);
@@ -34,3 +29,6 @@ router.delete("/frameworks/:id", frameworkAPI.deleteFramework);
 router.get("/frameworks/:id", frameworkAPI.fetchFrameworkById);
 
 module.exports = router;
+
+// const Storage = API.Storage;
+// const multer = require("multer");

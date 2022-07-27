@@ -11,7 +11,7 @@
 
       <q-card-section>
         <div class="text-overline text-orange-9">
-          {{ item.mas_developed }}
+          {{ item.additional_tools_needed }}
         </div>
         <div class="text-h5 q-mt-sm q-mb-xs">{{ item.artifact_name }}</div>
         <div class="text-caption text-grey">

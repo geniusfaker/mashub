@@ -1,16 +1,4 @@
 const Agent = require("../models/agents");
-// const multerStorage = multer.memoryStorage();
-
-// let Storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "./uploads");
-//   },
-
-//   filename: function (req, file, cb) {
-//     cb(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
-//   },
-// });
-
 module.exports = class AGENT_API {
   // fetch all Agents
 

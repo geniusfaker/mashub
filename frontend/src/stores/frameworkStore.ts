@@ -7,7 +7,7 @@ export const useFrameworkStore = defineStore('framework', {
   state: () => ({
     frameworks: ref<Framework[]>([]),
     framework: ref<Framework>(),
-    url: 'http://localhost:5000/api/frameworks',
+    url: 'http://localhost:5000/frameworks',
   }),
   getters: {
     getPosts(state) {

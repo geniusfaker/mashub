@@ -3,7 +3,7 @@
     <q-item
       clickable
       tag="a"
-      v-for="item in store.menuItems"
+      v-for="item in store.MenuLinks"
       :href="item.url"
       :key="item.title"
     >

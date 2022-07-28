@@ -6,19 +6,6 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-<<<<<<< HEAD
-      // { path: '/home', component: () => import('src/pages/HomePage.vue') },
-      // { path: '/agents', component: () => import('src/pages/AgentsPage.vue') },
-      // {
-      //   path: '/frameworks',
-      //   component: () => import('src/pages/FrameworksPage.vue'),
-      // },
-      // {
-      //   path: '/extensions',
-      //   component: () => import('src/pages/ExtensionsPage.vue'),
-      // },
-      // { path: '/about', component: () => import('src/pages/AboutPage.vue') },
-=======
       { path: '/home', component: () => import('src/pages/HomePage.vue') },
       { path: '/agents', component: () => import('src/pages/AgentsPage.vue') },
       {
@@ -30,7 +17,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import('src/pages/ExtensionsPage.vue'),
       },
       { path: '/about', component: () => import('src/pages/AboutPage.vue') },
->>>>>>> restore
     ],
   },
 

@@ -7,7 +7,7 @@ export const useAgentStore = defineStore('agent', {
   state: () => ({
     agents: ref<Agent[]>([]),
     agent: ref<Agent>(),
-    url: 'http://localhost:5000/agents',
+    url: 'http://localhost:5000/api/agents',
   }),
   getters: {
     getPosts(state) {

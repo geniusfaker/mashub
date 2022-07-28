@@ -6,7 +6,10 @@
 
     <q-item-section>
       <q-item-label>{{ MenuLinkProps.title }}</q-item-label>
+<<<<<<< HEAD
       <q-item-label caption>{{ MenuLinkProps.caption }}</q-item-label>
+=======
+>>>>>>> restore
     </q-item-section>
   </q-item>
 </template>

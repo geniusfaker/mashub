@@ -2,6 +2,19 @@
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
     "jsx": "preserve",
-    "baseUrl": "."
-  }
+    "baseUrl": ".",
+    "strict": true,
+    "sourceMap": true,
+    "target": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
+  "compileOnSave": false
 }

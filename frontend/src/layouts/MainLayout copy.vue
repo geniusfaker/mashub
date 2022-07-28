@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <q-layout view="hHh lpR fFf">
     <q-drawer show-if-above side="left" bordered>
       <!-- drawer content -->
@@ -30,4 +30,4 @@ import MenuComponent from '../components/MenuComponent.vue';
 // // const toggleRightDrawer = () => {
 // //   rightDrawerOpen.value = !rightDrawerOpen.value;
 // // };
-</script>
+</script> -->

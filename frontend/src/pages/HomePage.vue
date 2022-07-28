@@ -1,7 +1,10 @@
-<template>
-  <q-page class="row items-center"> </q-page>
+<!-- <template>
+  <q-page class="row items-center">
+    <div>hello</div>
+  </q-page>
 </template>
 
 <script lang="ts" setup>
 // import { defineComponent, ref } from 'vue';
-</script>
+import { EssentialLinks } from 'src/stores/linksStore';
+</script> -->

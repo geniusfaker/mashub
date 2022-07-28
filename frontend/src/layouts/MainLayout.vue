@@ -8,7 +8,7 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="menuStore.toggleLeftDrawer"
+          @click="toggleLeftDrawer"
         />
 
         <q-toolbar-title> Quasar App </q-toolbar-title>
@@ -17,15 +17,11 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="menuStore.leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
         <q-item-label header> Essential Links </q-item-label>
 
-        <EssentialLink
-          v-for="link in menuStore.MenuLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <EssentialLink />
       </q-list>
     </q-drawer>
 
@@ -36,6 +32,12 @@
 </template>
 
 <script setup lang="ts">
-import useMenuStore from 'stores/menuStore.ts';
-const menuStore = useMenuStore();
+import { ref } from 'vue';
+import EssentialLink from 'components/EssentialLink.vue';
+
+const leftDrawerOpen = ref(false);
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
 </script>

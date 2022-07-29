@@ -7,9 +7,9 @@
     "install": "npm run install:frontend && npm run install:server",
     "install:frontend": "(cd frontend && npm install)",
     "install:server": "(cd backend && npm install)",
-    "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend/ && npm start",
     "start:frontend": "cd frontend/ && quasar dev",
-    "start:server": "cd backend/ && npm start",
     "build": "npm install && rm -rf backend/public/* && npm run build:frontend && npm run build:copy",
     "build:frontend": "cd frontend && quasar build ",
     "build:copy": " cp -r frontend/dist/*  backend/public"

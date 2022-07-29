@@ -8,20 +8,10 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,,html,md,json}\" --ignore-path .gitignore",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> afcc4ffba972a93700c3d88116128dd0a9de53f2
     "test": "echo \"No test specified\" && exit 0",
     "start": "quasar dev",
     "build": "quasar build",
     "serve": "quasar serve"
-<<<<<<< HEAD
-=======
-    "test": "echo \"No test specified\" && exit 0"
->>>>>>> 8fc1f8e4edefb13fde503dc712ddcdc5c73fde16
-=======
->>>>>>> afcc4ffba972a93700c3d88116128dd0a9de53f2
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",

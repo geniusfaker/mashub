@@ -7,7 +7,7 @@ export const useExtensionStore = defineStore('extension', {
   state: () => ({
     extensions: ref<Extension[]>([]),
     extension: ref<Extension>(),
-    url: 'http://localhost:5000/api/extensions',
+    url: 'http://localhost:5000/extensions',
   }),
   getters: {
     getPosts(state) {
